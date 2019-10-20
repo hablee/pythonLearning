@@ -1,0 +1,8 @@
+- %字符串格式化运算符
+```python
+s = 'I am %d years old and weight %d kg.' %(18,50)
+print(s)
+#同理用于小数
+s1 = 'It is %.1fC' %(30.4566)
+print(s1)
+```
