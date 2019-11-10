@@ -17,5 +17,45 @@ Fibonacci数列就是满足任一项数字是前两项的和（最开始两项�
 `Invalid.`
 # 解答
 ```python
-
+N = int(input())
+cnt = 0
+if N==0:
+        print('Invalid.')
+elif N==1:
+        
+        fibFi = 1
+        print('{:11d}'.format(fibFi),end='')
+        cnt = cnt + 1
+elif N==2:
+        fibFi = 1
+        print('{:11d}'.format(fibFi),end='')
+        cnt = cnt + 1
+        fibSc = 1
+        print('{:11d}'.format(fibSc),end='')
+        cnt = cnt + 1
+else:
+        fib=[]
+        fibFi = 1
+        fibSc = 1
+        print('{:11d}'.format(fibFi),end='')
+        cnt = cnt + 1
+        print('{:11d}'.format(fibSc),end='')
+        cnt = cnt + 1
+        fib.append(fibFi)
+        fib.append(fibSc)
+        for i in range(N-2):
+                fibTh= fibFi + fibSc
+                print('{:11d}'.format(fibTh),end='')
+                cnt = cnt + 1
+                if cnt%5==0:
+                        print()
+                fib.append(fibTh)
+                fibFi = fibSc
+                fibSc = fibTh
+        if cnt%5!=0:
+                print()
 ```
+# 测试结果
+答案正确
+# 思路
+主要还是要注意空格和换行的条件，不要用递归算fib，时间开销大
