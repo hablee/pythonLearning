@@ -8,7 +8,7 @@ while True:
     if name=='q':
         break
     filename = 'guest.txt'
-    with open(filename,'a',encoding='utf-8') as file_object:
+    with open(filename,'a',encoding='utf-8') as file_object:#使用a追加，使用utf-8可以使用中文
         file_object.write(name+"\n")
     name = input("请输入您的名字(输入'q'退出，不再输入)：")
 ```
