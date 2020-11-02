@@ -4,6 +4,8 @@
 
 测试图片：2.jpg
 
+保存的文件名：test1.py
+
 # 代码
 ```python
 import sys
@@ -31,4 +33,8 @@ cv2.imshow('SIFT features',img_sift)
 cv2.waitKey()
 
 cv2.waitKey()
+```
+在`Terminal`窗口键入：
+```python
+python test1.py 2.jpg
 ```
