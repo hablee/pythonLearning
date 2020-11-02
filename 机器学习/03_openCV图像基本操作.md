@@ -1,6 +1,6 @@
-使用环境：pycharm
-保存的文件名：test1.py
-当前项目下的图片：2.jpg
+使用环境：pycharm；
+保存的文件名：test1.py；
+当前项目下的图片：2.jpg；
 # 显示图像
 ```python
 import sys
