@@ -34,3 +34,7 @@ if __name__=='__main__':
     cv2.imshow('Star features',input_img)
     cv2.waitKey()
 ```
+在`Terminal`窗口键入：
+```python
+python test1.py 2.jpg
+```
