@@ -6,3 +6,10 @@
 - 导入模型，对文件夹中的图片进行预测，打印结果
 # test.py
 - 使用tensorflow对图像进行增强处理，增大预测的数据数量。主要用的是旋转，因为发现使用尺度变换保存的图片都是黑色
+# 文件目录
+我建了2个文件夹
+- modelsavepath，用来保存训练的模型
+- predictImage，用来放待预测的图片
+- for_my_fashionminist.py，训练模型
+- predict.py，使用模型进行预测
+- test.py，数据增强
