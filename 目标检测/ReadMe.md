@@ -4,7 +4,7 @@
 ## 二级目录cfg
 ### 三级目录coco.names
 ### 三级目录yolov3.cfg
-### 三级目录yolov3.weights
+### 三级目录yolov3.weights(太大了，无法上传,可以到[这里](https://pjreddie.com/media/files/yolov3.weights)下载)
 ## 二级目录result_imgs
 ## 二级目录test_imgs
 ### 三级目录test1.jpg
