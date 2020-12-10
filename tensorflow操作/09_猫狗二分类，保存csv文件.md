@@ -93,9 +93,11 @@ def split_data(SOURCE,TRAINING,TESTING,SPLIT_SIZE):
 
 # 模型建立
 model=tf.keras.models.Sequential([
-    tf.keras.layers.Conv2D(16,(3,3),activation='relu',input_shape=(150,150,3)),
+    tf.keras.layers.Conv2D(32,(3,3),activation='relu',input_shape=(150,150,3)),
     tf.keras.layers.MaxPooling2D(2,2),
     tf.keras.layers.Conv2D(32,(2,2),activation='relu'),
+    tf.keras.layers.MaxPooling2D(2,2),
+    tf.keras.layers.Conv2D(64,(3,3),activation='relu'),
     tf.keras.layers.MaxPooling2D(2,2),
     tf.keras.layers.Conv2D(64,(3,3),activation='relu'),
     tf.keras.layers.MaxPooling2D(2,2),
@@ -111,18 +113,18 @@ model.compile(optimizer=RMSprop(lr=0.001),loss='binary_crossentropy',metrics=['a
 TRAINING_DIR='./cats-v-dogs/train'
 train_datagen=ImageDataGenerator(rescale=1.0/255.)
 train_generator=train_datagen.flow_from_directory(TRAINING_DIR,
-                                                  batch_size=100,
+                                                  batch_size=50,
                                                   class_mode='binary',
                                                   target_size=(150,150))
 VALIDATION_DIR='./cats-v-dogs/test'
 validation_datagen=ImageDataGenerator(rescale=1.0/255.)
 validation_generator=validation_datagen.flow_from_directory(VALIDATION_DIR,
-                                                batch_size=100,
+                                                batch_size=50,
                                                 class_mode='binary',
                                                 target_size=(150,150))
 
 history=model.fit_generator(train_generator,
-                            epochs=20,
+                            epochs=10,
                             verbose=1,# 显示日志
                             validation_data=validation_generator)
 
@@ -169,6 +171,7 @@ from tensorflow.keras.preprocessing import image
 #     print("predict: dog")
 # else:
 #     print("predict: cat")
+
 ```
 # predict.py
 ```python
